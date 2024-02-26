@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TaskCell" customModule="TodoAppMVVM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AiC-M0-8iK">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sr8-tr-Uyc">
+                                <rect key="frame" x="8" y="60.666666666666657" width="184" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏋🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lV-DD-JaG">
+                                        <rect key="frame" x="0.0" y="0.0" width="184" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do Sport" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQf-zQ-GXL">
+                                        <rect key="frame" x="0.0" y="43.000000000000007" width="184" height="35.999999999999993"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gg-cl-R9O">
+                                <rect key="frame" x="8.0000000000000018" y="8.0000000000000018" width="31.666666666666671" height="31.666666666666671"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="21"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                    <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="checkmarkButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="BG6-A8-Q16"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fz-Mj-3G9">
+                                <rect key="frame" x="160.33333333333334" y="8.0000000000000018" width="31.666666666666657" height="31.666666666666671"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="minus.circle.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="21"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="blN-fT-TxC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56470588235294117" green="0.84705882352941175" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9gg-cl-R9O" firstAttribute="leading" secondItem="AiC-M0-8iK" secondAttribute="leading" constant="8" id="08T-L2-13m"/>
+                            <constraint firstItem="9gg-cl-R9O" firstAttribute="top" secondItem="AiC-M0-8iK" secondAttribute="top" constant="8" id="4ZO-7U-ovD"/>
+                            <constraint firstItem="sr8-tr-Uyc" firstAttribute="leading" secondItem="AiC-M0-8iK" secondAttribute="leading" constant="8" id="5FX-1O-3H6"/>
+                            <constraint firstItem="9Fz-Mj-3G9" firstAttribute="top" secondItem="AiC-M0-8iK" secondAttribute="top" constant="8" id="De2-Y9-X1f"/>
+                            <constraint firstItem="sr8-tr-Uyc" firstAttribute="centerY" secondItem="AiC-M0-8iK" secondAttribute="centerY" id="Mex-Jt-YGl"/>
+                            <constraint firstItem="sr8-tr-Uyc" firstAttribute="centerX" secondItem="AiC-M0-8iK" secondAttribute="centerX" id="QW1-PC-Tus"/>
+                            <constraint firstAttribute="trailing" secondItem="9Fz-Mj-3G9" secondAttribute="trailing" constant="8" id="YFg-7E-a5U"/>
+                            <constraint firstAttribute="trailing" secondItem="sr8-tr-Uyc" secondAttribute="trailing" constant="8" id="fAP-uH-h8R"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="AiC-M0-8iK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OMJ-IR-sFE"/>
+                <constraint firstAttribute="bottom" secondItem="AiC-M0-8iK" secondAttribute="bottom" id="PQ0-jS-KxU"/>
+                <constraint firstItem="AiC-M0-8iK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="uuL-eT-AUl"/>
+                <constraint firstAttribute="trailing" secondItem="AiC-M0-8iK" secondAttribute="trailing" id="vlO-xW-gJK"/>
+            </constraints>
+            <connections>
+                <outlet property="checkmarkButton" destination="9gg-cl-R9O" id="IOf-TX-7Qv"/>
+                <outlet property="containerView" destination="AiC-M0-8iK" id="s2N-3o-q7u"/>
+                <outlet property="deleteButton" destination="9Fz-Mj-3G9" id="jhC-ft-BWp"/>
+                <outlet property="iconLabel" destination="9lV-DD-JaG" id="epq-cH-Z52"/>
+                <outlet property="titleLabel" destination="LQf-zQ-GXL" id="74W-2g-A0m"/>
+            </connections>
+            <point key="canvasLocation" x="65.648854961832058" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="123"/>
+        <image name="minus.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
